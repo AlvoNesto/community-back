@@ -1,0 +1,15 @@
+{
+  "type": "postgres",
+  "host": "ep-dawn-bird-a47uv7mi.us-east-1.aws.neon.tech",
+  "port": 5432,
+  "username": "CommunityDB_owner",
+  "password": "d0g4MKsXwxrF",
+  "database": "CommunityDB",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "synchronize": true,
+  "extra": {
+    "ssl": {
+      "rejectUnauthorized": false
+    }
+  }
+}
