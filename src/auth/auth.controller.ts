@@ -20,7 +20,6 @@ export class AuthController {
   @Post('register')
   async register(@Body() registerUser: RegisterUserDto) {
     try {
-      console.log("entrando a register")
       return this.authService.register(registerUser);
     } catch (error) {
       console.error(error);
