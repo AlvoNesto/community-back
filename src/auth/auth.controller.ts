@@ -1,4 +1,4 @@
-import { Controller, Request, Post, UseGuards, Body } from '@nestjs/common';
+import { Controller, Request, Post, Get, UseGuards, Body } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { JwtAuthGuard } from './jwt-auth.guard';
 import { RegisterUserDto } from './dtos/register-user.dto';
@@ -28,8 +28,8 @@ export class AuthController {
   }
 
   @UseGuards(JwtAuthGuard)
-  @Post('validate')
-  validateToken(@Request() req) {
-    return req.user;
+  @Get('validate-token')
+  validateToken() {
+    return { valid: true };
   }
 }
